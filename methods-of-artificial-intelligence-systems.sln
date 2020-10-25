@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L1-Dijkstra", "L1-Dijkstra\L1-Dijkstra.csproj", "{699E8645-CBAA-4D28-BEC6-60C7A7EC570F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdditionalLibs", "AdditionalLibs", "{55DF2920-1C3A-43BF-827E-D10485A87AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{61BA528D-C5D5-404B-A476-0F12C1BD5153}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{699E8645-CBAA-4D28-BEC6-60C7A7EC570F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{699E8645-CBAA-4D28-BEC6-60C7A7EC570F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{699E8645-CBAA-4D28-BEC6-60C7A7EC570F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61BA528D-C5D5-404B-A476-0F12C1BD5153} = {55DF2920-1C3A-43BF-827E-D10485A87AF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB1B2E5E-126E-49F9-8A1C-32064FB2B45C}
