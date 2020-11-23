@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L1-Dijkstra", "L1-Dijkstra\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdditionalLibs", "AdditionalLibs", "{55DF2920-1C3A-43BF-827E-D10485A87AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{61BA528D-C5D5-404B-A476-0F12C1BD5153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj", "{61BA528D-C5D5-404B-A476-0F12C1BD5153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L2-TicTacToe", "L2-TicTacToe\L2-TicTacToe.csproj", "{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61BA528D-C5D5-404B-A476-0F12C1BD5153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
