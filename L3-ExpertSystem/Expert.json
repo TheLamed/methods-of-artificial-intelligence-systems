@@ -1,0 +1,204 @@
+﻿{
+  "Default": [
+    {
+      "Id": 0,
+      "Text": "Якому мультіплеєру ви надаєте перевагу?",
+      "Answers": [
+        {
+          "Id": 0,
+          "Answer": "Змагання",
+          "Exclude": [],
+          "Include": [3]
+        },
+        {
+          "Id": 1,
+          "Answer": "Кооп",
+          "Exclude": [],
+          "Include": [4]
+        },
+        {
+          "Id": 3,
+          "Answer": "Не люблю мультіплеєр",
+          "Exclude": [],
+          "Include": [1, 2]
+        }
+      ]
+    }
+  ],
+  "All": [
+    {
+      "Id": 1,
+      "Text": "Якої тривалості ви любите ігри?",
+      "Answers": [
+        {
+          "Id": 11,
+          "Answer": "Коротка",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 12,
+          "Answer": "Середня",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 13,
+          "Answer": "Довга",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 14,
+          "Answer": "Безкінечна",
+          "Exclude": [],
+          "Include": []
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Text": "Якій складності ви надаєте перевагу?",
+      "Answers": [
+        {
+          "Id": 21,
+          "Answer": "Легка",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 22,
+          "Answer": "Нормальна",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 23,
+          "Answer": "Складна",
+          "Exclude": [],
+          "Include": []
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Text": "Який вид змагань ви любите?",
+      "Answers": [
+        {
+          "Id": 31,
+          "Answer": "Шутер",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 32,
+          "Answer": "Стратегія",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 33,
+          "Answer": "Моба",
+          "Exclude": [],
+          "Include": []
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Text": "Що вам до вподоби більше?",
+      "Answers": [
+        {
+          "Id": 41,
+          "Answer": "Головоломки",
+          "Exclude": [],
+          "Include": []
+        },
+        {
+          "Id": 42,
+          "Answer": "Проходження босів",
+          "Exclude": [],
+          "Include": []
+        }
+      ]
+    }
+  ],
+  "Results": [
+    {
+      "Text": "Contr Strike",
+      "Answers" : [0, 31]
+    },
+    {
+      "Text": "Call of duty",
+      "Answers" : [0, 31]
+    },
+    {
+      "Text": "Civilization",
+      "Answers" : [0, 32]
+    },
+    {
+      "Text": "Dota 2",
+      "Answers" : [0, 33]
+    },
+    {
+      "Text": "LOL",
+      "Answers" : [0, 33]
+    },
+    {
+      "Text": "Portal 2",
+      "Answers" : [1, 41]
+    },
+    {
+      "Text": "Cuphead",
+      "Answers" : [1, 42]
+    },
+    {
+      "Text": "Deponia",
+      "Answers" : [3, 11, 21]
+    },
+    {
+      "Text": "Portal",
+      "Answers" : [3, 12, 21]
+    },
+    {
+      "Text": "Zuma",
+      "Answers" : [3, 13, 21]
+    },
+    {
+      "Text": "Animal crossing",
+      "Answers" : [3, 14, 21]
+    },
+    {
+      "Text": "Half Life",
+      "Answers" : [3, 11, 22]
+    },
+    {
+      "Text": "Control",
+      "Answers" : [3, 12, 22]
+    },
+    {
+      "Text": "Dark Souls I Remastered",
+      "Answers" : [3, 13, 22]
+    },
+    {
+      "Text": "Minecraft",
+      "Answers" : [3, 14, 22]
+    },
+    {
+      "Text": "Super meat boy",
+      "Answers" : [3, 11, 23]
+    },
+    {
+      "Text": "Mario",
+      "Answers" : [3, 12, 23]
+    },
+    {
+      "Text": "Dark Souls III",
+      "Answers" : [3, 13, 23]
+    },
+    {
+      "Text": "Minecraft",
+      "Answers" : [3, 14, 23]
+    }
+  ]
+}

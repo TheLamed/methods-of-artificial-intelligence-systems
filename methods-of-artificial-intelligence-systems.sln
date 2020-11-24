@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L2-TicTacToe", "L2-TicTacToe\L2-TicTacToe.csproj", "{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3-ExpertSystem", "L3-ExpertSystem\L3-ExpertSystem.csproj", "{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{470A1DDF-D0C4-4FFF-9576-E56B3E00CBB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
