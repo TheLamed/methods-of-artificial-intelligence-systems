@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L2-TicTacToe", "L2-TicTacTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3-ExpertSystem", "L3-ExpertSystem\L3-ExpertSystem.csproj", "{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "methods-of-artificial-intelligence-systemsML.Model", "methods-of-artificial-intelligence-systemsML.Model\methods-of-artificial-intelligence-systemsML.Model.csproj", "{D0669526-6547-4145-8F67-BDC213DA5532}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L6-NeuroNetworkImages", "methods-of-artificial-intelligence-systemsML.ConsoleApp\L6-NeuroNetworkImages.csproj", "{395FE22F-FD1F-4F67-8DDB-8DECD9BE8B94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5EFA1B1-1A8D-4FB2-B09E-6C90CC5812AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0669526-6547-4145-8F67-BDC213DA5532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0669526-6547-4145-8F67-BDC213DA5532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0669526-6547-4145-8F67-BDC213DA5532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0669526-6547-4145-8F67-BDC213DA5532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395FE22F-FD1F-4F67-8DDB-8DECD9BE8B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395FE22F-FD1F-4F67-8DDB-8DECD9BE8B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395FE22F-FD1F-4F67-8DDB-8DECD9BE8B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395FE22F-FD1F-4F67-8DDB-8DECD9BE8B94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
