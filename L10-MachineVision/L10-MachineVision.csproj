@@ -44,6 +44,9 @@
     <None Update="assets\Model\TinyYolo2_model.onnx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="tiny_yolov2.tar.gz">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

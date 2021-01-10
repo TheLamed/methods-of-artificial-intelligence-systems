@@ -14,46 +14,77 @@ namespace L10_MachineVision
     {
         static void Main(string[] args)
         {
-            var assetsRelativePath = @"assets";
-            string assetsPath = GetAbsolutePath(assetsRelativePath);
-            var modelFilePath = Path.Combine(assetsPath, "Model", "TinyYolo2_model.onnx");
-            var imagesFolder = Path.Combine(assetsPath, "images");
-            var outputFolder = Path.Combine(assetsPath, "images", "output");
+            var modelFilePath = Path.Combine("assets", "Model", "TinyYolo2_model.onnx");
 
+            Console.WriteLine("Image path: ");
+            var imgPath = Console.ReadLine();
+
+            var path = Path.GetDirectoryName(imgPath);
+            //var outputImgPath = Path.Combine(imgPath, Path.GetFileNameWithoutExtension(imgPath) + "-output" + Path.GetExtension(imgPath));
+
+            var img = new ImageNetData
+            {
+                ImagePath = imgPath,
+                Label = Path.GetFileName(imgPath)
+            };
 
             MLContext mlContext = new MLContext();
 
-            try
-            {
-                var images = ImageNetData.ReadFromFile(imagesFolder);
-                var imageDataView = mlContext.Data.LoadFromEnumerable(images);
+            var imageDataView = mlContext.Data.LoadFromEnumerable(new List<ImageNetData> { img });
 
-                var modelScorer = new OnnxModelScorer(imagesFolder, modelFilePath, mlContext);
+            var modelScorer = new OnnxModelScorer(modelFilePath, mlContext);
+            var probabilities = modelScorer.Score(imageDataView);
+            var parser = new YoloOutputParser();
 
-                var probabilities = modelScorer.Score(imageDataView);
+            var boundingBoxes = probabilities
+                .Select(probability => parser.ParseOutputs(probability))
+                .Select(boxes => parser.FilterBoundingBoxes(boxes, 5, .5F));
 
-                var parser = new YoloOutputParser();
+            IList<YoloBoundingBox> detectedObjects = boundingBoxes.ElementAt(0);
 
-                var boundingBoxes = probabilities
-                    .Select(probability => parser.ParseOutputs(probability))
-                    .Select(boxes => parser.FilterBoundingBoxes(boxes, 5, .5F));
+            DrawBoundingBox(path, path, Path.GetFileName(imgPath), detectedObjects);
+            LogDetectedObjects(imgPath, detectedObjects);
 
-                for (var i = 0; i < images.Count(); i++)
-                {
-                    string imageFileName = images.ElementAt(i).Label;
-                    IList<YoloBoundingBox> detectedObjects = boundingBoxes.ElementAt(i);
+            //var assetsRelativePath = @"assets";
+            //string assetsPath = GetAbsolutePath(assetsRelativePath);
+            //var modelFilePath = Path.Combine(assetsPath, "Model", "TinyYolo2_model.onnx");
+            //var imagesFolder = Path.Combine(assetsPath, "images");
+            //var outputFolder = Path.Combine(assetsPath, "images", "output");
 
-                    DrawBoundingBox(imagesFolder, outputFolder, imageFileName, detectedObjects);
-                    LogDetectedObjects(imageFileName, detectedObjects);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
 
-            Console.WriteLine("========= End of Process..Hit any Key ========");
-            Console.ReadLine();
+            //MLContext mlContext = new MLContext();
+
+            //try
+            //{
+            //    var images = ImageNetData.ReadFromFile(imagesFolder);
+            //    var imageDataView = mlContext.Data.LoadFromEnumerable(images);
+
+            //    var modelScorer = new OnnxModelScorer(imagesFolder, modelFilePath, mlContext);
+
+            //    var probabilities = modelScorer.Score(imageDataView);
+
+            //    var parser = new YoloOutputParser();
+
+            //    var boundingBoxes = probabilities
+            //        .Select(probability => parser.ParseOutputs(probability))
+            //        .Select(boxes => parser.FilterBoundingBoxes(boxes, 5, .5F));
+
+            //    for (var i = 0; i < images.Count(); i++)
+            //    {
+            //        string imageFileName = images.ElementAt(i).Label;
+            //        IList<YoloBoundingBox> detectedObjects = boundingBoxes.ElementAt(i);
+
+            //        DrawBoundingBox(imagesFolder, outputFolder, imageFileName, detectedObjects);
+            //        LogDetectedObjects(imageFileName, detectedObjects);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.ToString());
+            //}
+
+            //Console.WriteLine("========= End of Process..Hit any Key ========");
+            //Console.ReadLine();
         }
 
         public static string GetAbsolutePath(string relativePath)
@@ -109,7 +140,8 @@ namespace L10_MachineVision
                 if (!Directory.Exists(outputImageLocation))
                     Directory.CreateDirectory(outputImageLocation);
 
-                image.Save(Path.Combine(outputImageLocation, imageName));
+                var pth = Path.GetFileNameWithoutExtension(imageName) + "-output" + Path.GetExtension(imageName);
+                image.Save(Path.Combine(outputImageLocation, pth));
             }
         }
 
