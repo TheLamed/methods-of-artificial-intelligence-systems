@@ -27,7 +27,7 @@ namespace Methods_of_artificial_intelligence_systemsML.Model
             MLContext mlContext = new MLContext();
 
             // Load model & create prediction engine
-            string modelPath = @"C:\Users\PC\AppData\Local\Temp\MLVSTools\methods-of-artificial-intelligence-systemsML\methods-of-artificial-intelligence-systemsML.Model\MLModel.zip";
+            string modelPath = @"D:\MSHI\methods-of-artificial-intelligence-systemsML.Model\MLModel.zip";
             ITransformer mlModel = mlContext.Model.Load(modelPath, out var modelInputSchema);
             var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
